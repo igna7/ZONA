@@ -1,7 +1,4 @@
 <%= form_for (@article) do |f| %>
-	<div class="field" style="font-size:20px">
-	<label for="exampleFileUpload" class="button">Subir imagen</label> Seleccionar imagen de portada <%= f.file_field :cover, class:"button show-for-sr", id:"exampleFileUpload"%>
-	</div>
 	<div class="field">
 		<%= f.text_field :title, placeholder: "Título" %>
 	</div>

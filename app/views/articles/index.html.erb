@@ -1,3 +1,14 @@
 <div class="contenido menu-centered">
-<h1>Esto es el index de los articulos</h1>
+	<h1><b>¿Qué es lo que te inspira?</b></h1>
+	<span> Somos la comunidad perfecta para ti. </span>
+</div>
+<div class="index-articles top-bar" id="posts" style="background:none;">
+<% @articles.each do |article| %>
+		<div class="post">
+		<div class="post_content">
+				<h2> <%= link_to article.title, article %> </h2>
+		</div>
+		</div>
+<%end%>
+</div>
 </div>
