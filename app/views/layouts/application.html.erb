@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ZONA</title>
+  <title>ZONAUNIVERSITARIA</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-<div class="title-bar menu-logo" data-responsive-toggle="menu-ejemplo">
-  	<div class="logo">ZONA UNIVERSITARIA</div>
-	</div>
-	<div class="title-bar menu-mobile">
-		<div class="menu-centered">
-	  <ul class="menu">
-	    <li>
+  <div class="title-bar menu-logo" data-responsive-toggle="menu-ejemplo">
+    <div class="logo">ZONA UNIVERSITARIA</div>
+  </div>
+  <div class="title-bar menu-mobile">
+    <div class="menu-centered">
+    <ul class="menu">
+      <li>
         <%= link_to "Inicio", root_path %>
       </li>
       <li><%= link_to "Blog", '/articles' %></li>
@@ -22,11 +24,11 @@
       <li><%= link_to "Salir", destroy_user_session_path ,class:"menu-right", method: :delete %></li>
       <li><a href="/articles/new" class="hollow button menu" style="background:none;">Crear inspiración</a></li>
       <% else %>
-        <li><a href="/users/sign_in" class="hollow button">Ingresar / Registrarme</a></button></li>
+        <li><a href="/users/sign_in" class="hollow button">Ingresar / Registrarme</a></li>
       </ul>
       <%end%>
-	</div>
-	</div>
+  </div>
+  </div>
 
 <div class="top-bar menu-desktop">
   <div class="top-bar-left">
@@ -40,17 +42,17 @@
     </ul>
   </div>
   <div class="top-bar-right">
-  	<% if user_signed_in? %>
+    <% if user_signed_in? %>
      <a href="/articles/new" class="hollow button menu" style="background:none;">Crear inspiración</a>
     </ul>
-	  <%= link_to "Mi cuenta", edit_user_registration_path, class:"menu-right" %>
-	  <%= link_to "Salir", destroy_user_session_path ,class:"menu-right", method: :delete %>
-	 </ul>
-	<% else %> 
+    <%= link_to "Mi cuenta", edit_user_registration_path, class:"menu-right" %>
+    <%= link_to "Salir", destroy_user_session_path ,class:"menu-right", method: :delete %>
+   </ul>
+  <% else %> 
     <ul class="menu" style="background:none;">
      <a href="/users/sign_in" class="hollow button">Ingresar / Registrarme</a></button>
     </ul>
-    	    <%end%>
+          <%end%>
   </div>
 </div>
 <p class="notice"><%= notice %></p>
@@ -58,7 +60,6 @@
 <%= yield %>
 
 </body>
-
 <div class="footer">
     <div class="menu-centered">
     <ul class="menu">

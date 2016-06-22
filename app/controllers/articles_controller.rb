@@ -1,7 +1,9 @@
 class ArticlesController < ApplicationController
 	
-	before_action :find_post, only: [:show, :edit, :update, :destroy]
+	before_action :find_post, only: [:show, :edit, :update, :destroy,:upvote, :downvote]
 	before_action :authenticate_user!, except: [:index, :show]
+	before_action :authenticate_editor!, only: [:new,:create,:update]
+	before_action :authenticate_admin!, only: [:destroy]
 
 
 	def index
@@ -9,6 +11,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def show
+		@article.update_visits_count
 	end
 
 	def new
@@ -38,6 +41,16 @@ class ArticlesController < ApplicationController
 	def destroy
 		@article.destroy
 		redirect_to root_path
+	end
+
+	def upvote
+		@article.upvote_by current_user
+		redirect_to :back
+	end
+
+	def downvote
+		@article.downvote_by current_user
+		redirect_to :back
 	end
 
 	private

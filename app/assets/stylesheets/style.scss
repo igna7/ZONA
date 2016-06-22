@@ -11,6 +11,22 @@
     display: none;
   }
 }
+.link-blog{
+	color: white;
+}
+.index-dance{
+	padding-top: 90px;
+}
+.fondo-grey{
+	background: #1D1D1D;
+	padding-top: 10px;
+	padding-bottom: 100px;
+}
+.fondo{
+	background: #009ED2;
+	padding-top: 10px;
+	padding-bottom: 100px;
+}
 .share-buttons{
 	padding-left: 10px;
 	padding-bottom: 30px;
@@ -281,6 +297,7 @@ h1{}
 	vertical-align: middle;
 }
 .contenido{
+	padding-bottom: 80px;
 	padding-top: 80px;
 	margin-left: 2.5%;
 	margin-right: 2.5%;
@@ -290,7 +307,6 @@ h1{}
 }
 .footer{
 	background: #019ED3;
-	margin-top: 120px;
 	a{
 		text-decoration: none;
 		color:white;
