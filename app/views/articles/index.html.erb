@@ -9,8 +9,10 @@
 	<div class="index-articles top-bar" id="posts" style="background:none;">
 <%= render 'article' %>
 </div>
-
+<div class="digg_pagination top-bar"><%= will_paginate @articles , :page_links => false, previous_label:"Anterior",next_label:"Siguiente"%></div>
 <div class="index-articles title-bar" id="postsmobile" style="background:none;color:black;">
 <%= render 'article' %>
+
+<div class="digg_pagination_mobile"><%= will_paginate @articles , :page_links => false, previous_label:"Anterior",next_label:"Siguiente"%></div>
 </div>
 </div>
