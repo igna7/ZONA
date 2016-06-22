@@ -16,7 +16,7 @@
 	    <li>
         <%= link_to "Inicio", root_path %>
       </li>
-      <li><%= link_to "Eventos", root_path %></li>
+      <li><%= link_to "Blog", '/articles' %></li>
       <li><%= link_to "Revista", root_path %></li>
       <% if user_signed_in? %>
       <li><%= link_to "Salir", destroy_user_session_path ,class:"menu-right", method: :delete %></li>
@@ -35,7 +35,7 @@
       <li>
         <%= link_to "Inicio", root_path %>
       </li>
-      <li><%= link_to "Eventos", root_path %></li>
+      <li><%= link_to "Blog", '/articles' %></li>
       <li><%= link_to "Revista", root_path %></li>
     </ul>
   </div>
