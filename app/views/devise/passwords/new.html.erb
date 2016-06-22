@@ -1,0 +1,18 @@
+<div class="contenido-desk">
+<div class="square">
+<i class="material-icons blue10">verified_user</i>
+<h2>¿Olvidaste tú contraseña?</h2><hr/>
+<p class="text-left">Por favor ingrese su dirección de correo electrónico y le enviaremos las instrucciones para restablecer su contraseña.</p>
+<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :email, label: "Correo electrónico", autofocus: true ,placeholder:"nombredeusuario@dominio.com"%>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Restablecer mi contraseña",class:"button btn-box" %>
+  </div>
+<% end %>
+</div>
+</div>

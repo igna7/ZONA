@@ -16,10 +16,15 @@
 	    <li>
         <%= link_to "Inicio", root_path %>
       </li>
-      <li><%= link_to "Blog", '/articles' %></li>
+      <li><%= link_to "Eventos", root_path %></li>
       <li><%= link_to "Revista", root_path %></li>
+      <% if user_signed_in? %>
+      <li><%= link_to "Salir", destroy_user_session_path ,class:"menu-right", method: :delete %></li>
+      <li><a href="/articles/new" class="hollow button menu" style="background:none;">Crear inspiración</a></li>
+      <% else %>
         <li><a href="/users/sign_in" class="hollow button">Ingresar / Registrarme</a></button></li>
       </ul>
+      <%end%>
 	</div>
 	</div>
 
@@ -30,14 +35,22 @@
       <li>
         <%= link_to "Inicio", root_path %>
       </li>
-      <li><%= link_to "Blog", '/articles' %></li>
+      <li><%= link_to "Eventos", root_path %></li>
       <li><%= link_to "Revista", root_path %></li>
     </ul>
   </div>
   <div class="top-bar-right">
+  	<% if user_signed_in? %>
+     <a href="/articles/new" class="hollow button menu" style="background:none;">Crear inspiración</a>
+    </ul>
+	  <%= link_to "Mi cuenta", edit_user_registration_path, class:"menu-right" %>
+	  <%= link_to "Salir", destroy_user_session_path ,class:"menu-right", method: :delete %>
+	 </ul>
+	<% else %> 
     <ul class="menu" style="background:none;">
      <a href="/users/sign_in" class="hollow button">Ingresar / Registrarme</a></button>
     </ul>
+    	    <%end%>
   </div>
 </div>
 <p class="notice"><%= notice %></p>
