@@ -31,7 +31,44 @@
 			<i class="fa fa-google-plus fa-2x share-buttons" aria-hidden="true"></i>
 		</a>
 	</div>
-	<div id="comments">
-		<%= render 'disqus'%>
+</div>
+
+<div id="post_show_mobile">
+	<div class="post_image_description big"><%= image_tag @article.cover.url(:medium) , class:"portada"%></div>
+	<h1 class="big"><%= @article.title %></h1>
+	<div class="clearfix">
+		<div class="username">
+		<p>Compartido por: <%= @article.user.name %><br/>
+		Hace: <%= time_ago_in_words(@article.created_at) %></p>
+		</div>
+			<div class="post_data">
+				<div class="data"><i class="material-icons red10 iconos">favorite</i><%= link_to pluralize(@article.get_upvotes.size, "Me gusta") ,like_article_path(@article), method: :get,class:"link-sin"%></div>
+				<div class="data"><i class="material-icons strike10 iconos">sentiment_dissatisfied</i><%= link_to pluralize(@article.get_downvotes.size, "Strike") ,dislike_article_path(@article), method: :get,class:"link-sin"%></div>
+				<div class="data"><i class="material-icons blue10 iconos">visibility</i><%= pluralize(@article.visits_count, "Visita")%></div>
+				<% if @article.user == current_user %>
+					<%= link_to "Editar", edit_article_path(@article) , class:"hollow button"%>
+				<%end%>
+			</div>
+	</div>	
+	<div class="description"> <%= simple_format(@article.body) %> </div>
+	<div class="username box-share" align="center">
+		<p style="font-size:20px;"><b>¡Compártelo!</b></p>
+		<!-- Twitter -->
+		<a onclick="javascript:window.open('http://twitter.com/share?text=<%=@article.title%> escrito por <%=@article.user.name %> - &amp;url=<%= url_for([@article, {only_path: false}])%>', '_blank','width=800, height=500, top=200, left=300');void(0);">
+			<i class="fa fa-twitter fa-2x share-buttons" aria-hidden="true"></i>
+		</a>
+		<!-- Facebook -->
+		<a onclick="javascript:window.open('http://www.facebook.com/sharer.php?u=<%= url_for([@article, {only_path: false}])%>', '_blank','width=800, height=500, top=200, left=300');void(0);">
+			<i class="fa fa-facebook fa-2x share-buttons" aria-hidden="true"></i>
+		</a>
+		<!-- Google Plus -->
+		<a onclick="javascript:window.open('https://www.plus.google.com/share?url=<%= url_for([@article, {only_path: false}])%>', '_blank','width=800, height=500, top=200, left=300');void(0);">
+			<i class="fa fa-google-plus fa-2x share-buttons" aria-hidden="true"></i>
+		</a>
 	</div>
+</div>
+
+
+<div id="comments">
+		<%= render 'disqus'%>
 </div>
