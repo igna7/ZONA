@@ -1,7 +1,7 @@
 <% @articles.each do |article| %>
 		<div class="post">
 		<div class="post_image">
-			<%= link_to (image_tag article.cover.url(:thumb)), article%>
+			<%= link_to (image_tag article.cover.url), article%>
 		</div>
 		<div class="post_content">
 			<div>

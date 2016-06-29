@@ -1,5 +1,5 @@
 <div id="post_show">
-	<div class="post_image_description big"><%= image_tag @article.cover.url(:medium) , class:"portada"%></div>
+	<div class="post_image_description big"> <%= image_tag @article.cover.url , class:"portada"%></div>
 	<h1 class="big"><%= @article.title %></h1>
 	<div class="clearfix">
 		<div class="username">
@@ -37,7 +37,7 @@
 </div>
 
 <div id="post_show_mobile">
-	<div class="post_image_description big"><%= image_tag @article.cover.url(:medium) , class:"portada"%></div>
+	<div class="post_image_description big"><%= image_tag @article.cover.url , class:"portada"%></div>
 	<h1 class="big"><%= @article.title %></h1>
 	<div class="clearfix">
 		<div class="username">
