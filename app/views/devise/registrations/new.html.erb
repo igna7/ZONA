@@ -1,15 +1,15 @@
 <div class="contenido-desk">
 
 <div class="square-mobile">
-<h2>Crear una cuenta usando</h2>
-<hr/><h2> o crear una nueva aquí</h2>
+<h2 class="text-center">Crear una cuenta usando</h2>
+<hr/><h2 class="text-center"> o crear una nueva aquí</h2>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
   <% if session[:omniauth_errors] %>
-    <div class="form-actions"><%= session[:omniauth_errors] %> </div>
+    <div class="form-actions text-center"><%= session[:omniauth_errors] %> </div>
   <%end%>
 
-  <div class="form-inputs">
+  <div class="form-inputs text-center">
     <%= f.input :name, required: true, autofocus: true, label: "Nombre", placeholder:"Mi nombre completo"%>
     <%= f.input :email, required: true, autofocus: true,label: "Correo electrónico",placeholder: "miusuario@dominio.com" %>
     <%= f.input :password,label: "Contraseña" , required: true, placeholder: ("#{@minimum_password_length} caracteres mínimo" if @minimum_password_length)%>
@@ -17,13 +17,13 @@
     <%= f.input :remember_me, label: "Estoy de acuerdo con los Términos de servicio" ,as: :boolean if devise_mapping.rememberable? %>
   </div>
 
-  <div class="form-actions">
+  <div class="form-actions text-center">
     <%= f.button :submit, "Registrarme",class:"button btn-box" %>
   </div>
 <% end %>
 </div>
 <div class="float-btm-mobile">
-  <p>¿Ya está registrado?</b></p>
+  <p class="text-center">¿Ya está registrado?</b></p>
   <div class="hollow button btn-box">
   <%- if controller_name != 'sessions' %>
   <%= link_to "Iniciar sesión", new_session_path(resource_name) %><br />
