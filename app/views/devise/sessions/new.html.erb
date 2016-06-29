@@ -1,60 +1,63 @@
 <div class="contenido">
-<div class="square">
-  <i class="material-icons blue10">account_circle</i>
-<h2>Iniciar sesión</h2><hr/>
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email, required: false, autofocus: true, label: "Correo electrónico",placeholder: "miusuario@dominio.com" %>
-    <%= f.input :password, required: false, label: "Contraseña" %>
-    <div class="link-left">
-    <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
- 	<%= link_to "¿Olvidaste la contraseña?", new_password_path(resource_name) %><br />
-	<% end -%>
-	</div>
-    <%= f.input :remember_me, label: "Recordarme" ,as: :boolean if devise_mapping.rememberable? %>
-  </div>
-  <div class="form-actions">
-    <%= f.button :submit, "Iniciar sesión" , class:"button btn-box"%>
-  </div>
-<% end %>
-<hr/><h2>o inicie sesión con</h2>
-</div>
-<div class="float-btm">
-	<p>¿Eres nuevo en <b>ZONA UNIVERSITARIA?</b></p>
-	<div class="hollow button btn-box">
-	<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  	<%= link_to "Crear una cuenta", new_registration_path(resource_name) %><br />
-	<% end -%>
-	</div>
-</div>
 
-<div class="square-mobile">
-  <i class="material-icons blue10">account_circle</i>
-<h2>Iniciar sesión</h2><hr/>
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email, required: false, autofocus: true, label: "Correo electrónico",placeholder: "miusuario@dominio.com" %>
-    <%= f.input :password, required: false, label: "Contraseña" %>
-    <div class="link-left">
-    <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-  <%= link_to "¿Olvidaste la contraseña?", new_password_path(resource_name) %><br />
-  <% end -%>
+  <div class="square">
+      <i class="material-icons blue10">account_circle</i>
+      <h2>Iniciar sesión</h2><hr/>
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="form-inputs">
+          <%= f.input :email, required: false, autofocus: true, label: "Correo electrónico",placeholder: "miusuario@dominio.com" %>
+          <%= f.input :password, required: false, label: "Contraseña" %>
+          <div class="link-left">
+          <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+       	<%= link_to "¿Olvidaste la contraseña?", new_password_path(resource_name) %><br />
+      	<% end -%>
+      	</div>
+          <%= f.input :remember_me, label: "Recordarme" ,as: :boolean if devise_mapping.rememberable? %>
+        </div>
+        <div class="form-actions">
+          <%= f.button :submit, "Iniciar sesión" , class:"button btn-box"%>
+        </div>
+      <% end %>
+      <hr/><h2>o inicie sesión con</h2>
   </div>
-    <%= f.input :remember_me, label: "Recordarme" ,as: :boolean if devise_mapping.rememberable? %>
+
+  <div class="square-mobile">
+      <i class="material-icons blue10">account_circle</i>
+    <h2>Iniciar sesión</h2><hr/>
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email, required: false, autofocus: true, label: "Correo electrónico",placeholder: "miusuario@dominio.com" %>
+        <%= f.input :password, required: false, label: "Contraseña" %>
+        <div class="link-left">
+        <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+      <%= link_to "¿Olvidaste la contraseña?", new_password_path(resource_name) %><br />
+      <% end -%>
+      </div>
+        <%= f.input :remember_me, label: "Recordarme" ,as: :boolean if devise_mapping.rememberable? %>
+      </div>
+      <div class="form-actions">
+        <%= f.button :submit, "Iniciar sesión" , class:"button btn-box"%>
+      </div>
+    <% end %>
+    <hr/><h2>o inicie sesión con</h2>
   </div>
-  <div class="form-actions">
-    <%= f.button :submit, "Iniciar sesión" , class:"button btn-box"%>
+  
+  <div class="float-btm">
+  	<p>¿Eres nuevo en <b>ZONA UNIVERSITARIA?</b></p>
+  	<div class="hollow button btn-box">
+  	<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+    	<%= link_to "Crear una cuenta", new_registration_path(resource_name) %><br />
+  	<% end -%>
+  	</div>
   </div>
-<% end %>
-<hr/><h2>o inicie sesión con</h2>
-</div>
-<div class="float-btm-mobile">
-  <p>¿Eres nuevo en <b>ZONA UNIVERSITARIA?</b></p>
-  <div class="hollow button btn-box">
-  <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-    <%= link_to "Crear una cuenta", new_registration_path(resource_name) %><br />
-  <% end -%>
+
+  <div class="float-btm-mobile">
+      <p>¿Eres nuevo en <b>ZONA UNIVERSITARIA?</b></p>
+      <div class="hollow button btn-box">
+      <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+        <%= link_to "Crear una cuenta", new_registration_path(resource_name) %><br />
+      <% end -%>
+      </div>
   </div>
-</div>
 
 </div>
