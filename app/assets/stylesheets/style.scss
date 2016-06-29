@@ -29,18 +29,6 @@
 	#post_show_mobile{
 		display: block;
 	}
-	.square{
-		display: none;
-	}
-	.square-mobile{
-		display: block;
-	}
-	.float-btm{
-		display: none;
-	}
-	.float-btm-mobile{
-		display: block;
-	}
     #main-nav.active{
     	display: block;
     	width: 100%;
@@ -73,18 +61,6 @@
 		display: block;
 	}
 	#post_show_mobile{
-		display: none;
-	}
-	.square{
-		display: block;
-	}
-	.square-mobile{
-		display: none;
-	}
-	.float-btm{
-		display: block;
-	}
-	.float-btm-mobile{
 		display: none;
 	}
 }
@@ -340,44 +316,18 @@ h1{}
 	position: fixed;
 	top: 0px;
 }
-.float-btm{
-	margin: auto;
-	text-align: center;
-	width: 300px;
-	margin-top: 20px;
-}
 
 .float-btm-mobile{
 	margin: auto;
 	text-align: center;
-	width: 90%;
+	width: 80%;
 	margin-top: 20px;
 }
 .square-mobile{
 	border: 1px solid #CCCCCC;
 	border-radius: 10px;
 	padding: 20px;
-	width: 90%;
-	text-align: center;
-	margin: auto;
-
-	h2{
-		font-size: 25px;
-	}
-	label{
-		font-size: 15px;
-		text-align: left;
-	}
-	hint{
-		font-size: 15px;
-		text-align: left;
-	}
-}
-.square{
-	border: 1px solid #CCCCCC;
-	border-radius: 10px;
-	padding: 20px;
-	width: 480px;
+	width: 80%;
 	text-align: center;
 	margin: auto;
 
