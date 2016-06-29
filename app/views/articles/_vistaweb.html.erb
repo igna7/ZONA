@@ -3,6 +3,9 @@
 	<h1 class="big"><%= @article.title %></h1>
 	<div class="clearfix">
 		<div class="username">
+		<% @article.categories.each do |category| %>
+		<%= link_to category.name, category, class:"tiny hollow button"%>
+		<%end%>
 		<p>Compartido por: <%= @article.user.name %><br/>
 		Hace: <%= time_ago_in_words(@article.created_at) %></p>
 		</div>
@@ -38,6 +41,9 @@
 	<h1 class="big"><%= @article.title %></h1>
 	<div class="clearfix">
 		<div class="username">
+		<% @article.categories.each do |category| %>
+		<%= link_to category.name, category, class:"tiny hollow button"%>
+		<%end%>
 		<p>Compartido por: <%= @article.user.name %><br/>
 		Hace: <%= time_ago_in_words(@article.created_at) %></p>
 		</div>

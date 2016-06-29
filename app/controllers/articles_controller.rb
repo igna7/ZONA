@@ -16,10 +16,12 @@ class ArticlesController < ApplicationController
 
 	def new
 		@article = current_user.articles.build
+		@categories = Category.all.order("name ASC")
 	end
 
 	def create
 		@article = current_user.articles.build(post_params)
+		@article.categories = params[:categories]
 		if @article.save
 			redirect_to @article
 		else
@@ -59,6 +61,6 @@ class ArticlesController < ApplicationController
 	end
 
 	def post_params
-		params.require(:article).permit(:title,:body,:cover)
+		params.require(:article).permit(:title,:body,:cover, :categories)
 	end 
 end

@@ -8,6 +8,12 @@
 	<div class="field">
 		<%= f.text_area :body, placeholder: "Escribe tu inspiración aquí", style:"height: 200px;" %>
 	</div>
+	<div class="field menu-centered">
+		<h3>Categorías</h3>
+		<% @categories.each do |category| %>
+			<div><%= check_box_tag "categories[]", category.id %> <%= category.name %></div>
+		<%end%>
+	</div>
 	<div class="field">
 		<%= f.submit "Guardar" , class:"btn be-blue expanded button"%>
 	</div>

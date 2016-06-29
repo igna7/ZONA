@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
+  before_action :set_categories
+
   protected
 
   def authenticate_editor!
@@ -18,5 +20,10 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
   	devise_parameter_sanitizer.for(:sign_up) << :name
   	devise_parameter_sanitizer.for(:account_update) << :name
+  end
+
+  private
+  def set_categories
+    @categories = Category.all
   end
 end
