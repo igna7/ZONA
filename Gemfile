@@ -14,6 +14,12 @@ gem 'paperclip', '~> 4.3', '>= 4.3.6'
 gem 'aws-sdk', '< 2.0'
 gem 'acts_as_votable', '~> 0.10.0'
 
+#Instalando Omniauth
+gem 'omniauth', '~> 1.3', '>= 1.3.1'
+
+#Instalando middleware de facebook
+gem 'omniauth-facebook', '~> 3.0'
+
 #Paginación
 gem 'will_paginate', '~> 3.1'
 

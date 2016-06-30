@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :categories
-  devise_for :users
+  devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
   resources :articles do
   	member do
   		get "like", to: "articles#upvote"
