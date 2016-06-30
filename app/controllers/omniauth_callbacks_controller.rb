@@ -22,6 +22,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 	end
 
 	def failure
-    	redirect_to root_path, notice: "An Error has occurred. Please try again!"
+    	redirect_to '/articles', notice: "An Error has occurred. Please try again!"
   	end
 end
