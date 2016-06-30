@@ -17,7 +17,8 @@ Devise.setup do |config|
 
   OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE if Rails.env.development?
 
-  config.omniauth :facebook, "202745410126487", "4571c77c97a4d642a93ccb5b2e10ffa9"
+  config.omniauth :facebook, "202745410126487", "4571c77c97a4d642a93ccb5b2e10ffa9", 
+                    callback_url: "/users/auth/facebook/callback"
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'

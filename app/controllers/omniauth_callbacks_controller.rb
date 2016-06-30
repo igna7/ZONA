@@ -1,6 +1,7 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 	def facebook
 		auth = request.env["omniauth.auth"]
+		raise auth.to_yaml
 		
 		data = {
 			name: auth.info.name,
