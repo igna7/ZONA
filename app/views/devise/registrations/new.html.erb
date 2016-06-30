@@ -2,7 +2,7 @@
 
 <div class="square-mobile">
 <h2 class="text-center">Crear una cuenta usando</h2>
-<%= link_to "Facebook", omniauth_authorize_path(resource_name, :facebook) ,class:"button btn-fb"%><br />
+<p class="text-center"><%= link_to "Facebook", omniauth_authorize_path(resource_name, :facebook) ,class:"button btn-fb"%><br /></p>
 <hr/><h2 class="text-center"> o crear una nueva aquí</h2>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
