@@ -17,9 +17,6 @@
 	#main-nav{
 		display: none;
 	}
-	.menu-s-desktop{
-		display: none;
-	}
 	#posts {
     display: none;
 	}
@@ -318,14 +315,6 @@ h1{}
 	width: 100%;
 	position: fixed;
 	top: 0px;
-}
-.menu-s-desktop{
-	padding-top: 10px;
-	background: #4CAF50;
-	text-align: center;
-	height: 50px;
-	border-bottom: 1px solid #E7E8E9; 
-	width: 100%;
 }
 
 .float-btm-mobile{
