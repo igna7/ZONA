@@ -17,6 +17,9 @@
 	#main-nav{
 		display: none;
 	}
+	.menu-s-desktop{
+		display: none;
+	}
 	#posts {
     display: none;
 	}
@@ -316,10 +319,13 @@ h1{}
 	position: fixed;
 	top: 0px;
 }
-.banner-footer{
-	padding-top: 10px;
+.menu-s-desktop{
+	margin-top: 40px;
+	background: #4CAF50;
 	text-align: center;
+	position: fixed;
 	color: white;
+	height: 50px;
 	border-bottom: 1px solid #E7E8E9; 
 	width: 100%;
 }
