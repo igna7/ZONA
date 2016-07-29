@@ -18,7 +18,7 @@ gem 'acts_as_votable', '~> 0.10.0'
 gem 'omniauth', '~> 1.3', '>= 1.3.1'
 
 #Instalando middleware de facebook
-gem 'omniauth-facebook', '~> 3.0'
+gem 'omniauth-facebook', '1.4.0'
 
 #Paginación
 gem 'will_paginate', '~> 3.1'
