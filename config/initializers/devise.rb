@@ -18,7 +18,6 @@ Devise.setup do |config|
   OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE if Rails.env.development?
 
   config.omniauth :facebook, "1752196305061545", "03b40d5ae57ab1377ab053ff798de4d0"
-  config.omniauth :google_oauth2, "850398185028-kvocm7ni8pnj60c0q1l2flsrcmb20ciu.apps.googleusercontent.com", "bqgTKWtpQPGPiBbQT-sKe5m9", {client_options: {ssl: {ca_file: Rails.root.join("cacert.pem").to_s}}}
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'

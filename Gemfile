@@ -20,9 +20,6 @@ gem 'omniauth', '~> 1.3', '>= 1.3.1'
 #Instalando middleware de facebook
 gem 'omniauth-facebook', '~> 3.0'
 
-#Instalando middleware de Google
-gem "omniauth-google-oauth2", "~> 0.2.1"
-
 #Paginación
 gem 'will_paginate', '~> 3.1'
 
