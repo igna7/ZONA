@@ -1,4 +1,4 @@
-class OmniauthCallbacksController < Devise::OmniauthCallbacksController
+class OmniauthCallbacksController < ApplicationController
 	def facebook
 		auth = request.env["omniauth.auth"]
 		
@@ -20,8 +20,4 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 			redirect_to new_user_registration_url
 		end
 	end
-
-	def failure
-    	redirect_to '/articles', notice: "An Error has occurred. Please try again!"
-  	end
 end
