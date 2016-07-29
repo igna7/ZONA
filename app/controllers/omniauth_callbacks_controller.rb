@@ -1,4 +1,4 @@
-class OmniauthCallbacksController < Devise::OmniauthCallbacksController
+class OmniauthCallbacksController < ApplicationController
 	def facebook
 		auth = request.env["omniauth.auth"]
 		
