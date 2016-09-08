@@ -19,7 +19,20 @@ class User < ActiveRecord::Base
     user
   end
 
+  def follow!(amigo_id)
+    friendships.create(friend_id: amigo_id)
+  end
+
+  def can_follow?(amigo_id)
+    not amigo_id == self.id or friendships.where(friend_id: amigo_id).size > 0
+  end
+
   has_many :articles
+  has_many :friendships
+  has_many :follows, through: :friendships, source: :user
+
+  has_many :followers_friendships, class_name: "Friendship", foreign_key: "user_id"
+  has_many :followers, through: :followers_friendships, source: :friend
 
   include PermissionsConcern
 end

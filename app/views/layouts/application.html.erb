@@ -54,6 +54,7 @@
       <a class="separacion item"><%= link_to "Cuponera", root_path %></a>
       <% if user_signed_in? %>
       <a href="/articles/new" class="hollow button menu item" style="background:none;">Crear inspiración</a>
+      <a><%= link_to "Mi perfil", current_user, class:"menu-right" %></a>
       <a><%= link_to "Mi cuenta", edit_user_registration_path, class:"menu-right" %></a>
       <a class="item"><%= link_to "Salir", destroy_user_session_path ,class:"menu-right", method: :delete %></a>
       <% else %> 
