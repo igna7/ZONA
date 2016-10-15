@@ -1,5 +1,8 @@
 <div class="contenido">
 <h1 align="center"> <%= @user.name %></h1>
+<div align="center"><% if @user  == current_user %>
+<a><%= link_to "Editar mis datos", edit_user_registration_path%></a>
+<%end%></div>
 <% if user_signed_in? and current_user.can_follow?(@user.id) %>
 <div align="center"><button class="button btn-follow" id="follow_btn" data-friend="<%= @user.id %>">Follow</button></div>
 <%end%>

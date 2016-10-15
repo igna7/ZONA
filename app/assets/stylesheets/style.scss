@@ -9,6 +9,9 @@
 .separacion{
 	padding-left: 30px;
 }
+.separacion1{
+	padding-left: 15px;
+}
 .ads{
 	text-align: center;
 	margin: 0 auto;
@@ -70,7 +73,10 @@
 		display: none;
 	}
 }
-
+.logo-left{
+	margin-left: 10px;
+	margin-right: 10px;
+}
 .link-blog{
 	color: white;
 }
@@ -321,11 +327,21 @@ h1{}
 	width: 100%;
 }
 .menu-desktop{
+	padding-top: 10px;
+	padding-bottom: 10px;
 	background: white;
 	border-bottom: 1px solid #E7E8E9; 
 	width: 100%;
 	position: fixed;
 	top: 0px;
+}
+.menu-desktop-2{
+	padding-top: 25px;
+	background: white;
+	border-bottom: 1px solid #E7E8E9; 
+	width: 100%;
+	position: relative;
+	top: 38px;
 }
 
 .float-btm-mobile{
@@ -365,7 +381,7 @@ h1{}
 }
 .contenido{
 	padding-bottom: 80px;
-	padding-top: 80px;
+	padding-top: 20px;
 	margin-left: 2.5%;
 	margin-right: 2.5%;
 }
@@ -518,7 +534,6 @@ h1{}
 	}
 }
 #post_show {
-	padding-top: 1rem;
 	margin-left: 15%;
 	margin-right: 15%;
 	.post_image_description {
@@ -595,7 +610,6 @@ h1{}
 }
 
 #post_show_mobile {
-	padding-top: 1rem;
 	margin-left: 5%;
 	margin-right: 5%;
 	.post_image_description {
@@ -678,8 +692,6 @@ h1{}
 	padding-bottom: 15px;
 }
 .categories{
-	border-bottom: 1px solid #E9E9E9;
 	font-size:20px;
 	text-align: center;
-	border-top: 1px solid #E9E9E9;
 }

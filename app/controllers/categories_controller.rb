@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
   def index
-    @categories = Category.all.order("name ASC")
+    @categories = Category.all.order("created_at DESC")
   end
 
   # GET /categories/1

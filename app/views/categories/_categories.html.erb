@@ -1,0 +1,16 @@
+<% @category.articles.each do |article| %>
+		<div class="post">
+		<div class="post_image">
+			<%= link_to (image_tag article.cover.url(:thumb)), article%>
+		</div>
+		<div class="post_content">
+			<div>
+				<h2> <%= link_to article.title, article %> </h2>
+			</div>
+			<div class="data clearfix">
+			<p><i class="material-icons blue10 iconos">visibility</i> <%= article.visits_count %> <i class="material-icons red10 iconos">favorite</i> <%= article.get_likes.size %></p>
+			<p> </p>
+			</div>
+		</div>
+		</div>
+<%end%>

@@ -10,8 +10,9 @@ Rails.application.routes.draw do
   	end
   end
 
-  root 'welcome#index'
+  root 'articles#index'
 
+  get '/welcome', to: "welcome#index"
   get '/acerca', to: "welcome#acerca"
   get '/privacidad', to: "welcome#privacidad"
   get '/terminos', to: "welcome#terminos"
