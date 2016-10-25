@@ -26,6 +26,8 @@ gem 'will_paginate', '~> 3.1'
 #Fuentes para iconos
 gem "font-awesome-rails"
 
+#Editor de texto
+gem 'ckeditor'
 group :development, :test do
   gem 'byebug'
 end

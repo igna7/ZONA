@@ -28,24 +28,8 @@
 				<%end%>
 			</div>
 	</div>	
-	<div class="description"> <%= simple_format(@article.body) %> </div>
-	<div class="username box-share" align="center">
-		<p style="font-size:20px;"><b>¡Compártelo!</b></p>
-		<!-- Twitter -->
-		<a onclick="javascript:window.open('http://twitter.com/share?text=<%=@article.title%> escrito por <%=@article.user.name %> - &amp;url=<%= url_for([@article, {only_path: false}])%>', '_blank','width=800, height=500, top=200, left=300');void(0);">
-			<i class="fa fa-twitter fa-2x share-buttons" aria-hidden="true"></i>
-		</a>
-		<!-- Facebook -->
-		<a onclick="javascript:window.open('http://www.facebook.com/sharer.php?u=<%= url_for([@article, {only_path: false}])%>', '_blank','width=800, height=500, top=200, left=300');void(0);">
-			<i class="fa fa-facebook fa-2x share-buttons" aria-hidden="true"></i>
-		</a>
-		<!-- Google Plus -->
-		<a onclick="javascript:window.open('https://www.plus.google.com/share?url=<%= url_for([@article, {only_path: false}])%>', '_blank','width=800, height=500, top=200, left=300');void(0);">
-			<i class="fa fa-google-plus fa-2x share-buttons" aria-hidden="true"></i>
-		</a>
-	</div>
+	<div class="description"> <%= raw @article.body %> </div>
 </div>
-
 <div id="post_show_mobile">
 	<div class="ads"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- zonauniversitaria-mobi -->
@@ -75,24 +59,8 @@
 				<%end%>
 			</div>
 	</div>	
-	<div class="description"> <%= simple_format(@article.body) %> </div>
-	<div class="username box-share" align="center">
-		<p style="font-size:20px;"><b>¡Compártelo!</b></p>
-		<!-- Twitter -->
-		<a onclick="javascript:window.open('http://twitter.com/share?text=<%=@article.title%> escrito por <%=@article.user.name %> - &amp;url=<%= url_for([@article, {only_path: false}])%>', '_blank','width=800, height=500, top=200, left=300');void(0);">
-			<i class="fa fa-twitter fa-2x share-buttons" aria-hidden="true"></i>
-		</a>
-		<!-- Facebook -->
-		<a onclick="javascript:window.open('http://www.facebook.com/sharer.php?u=<%= url_for([@article, {only_path: false}])%>', '_blank','width=800, height=500, top=200, left=300');void(0);">
-			<i class="fa fa-facebook fa-2x share-buttons" aria-hidden="true"></i>
-		</a>
-		<!-- Google Plus -->
-		<a onclick="javascript:window.open('https://www.plus.google.com/share?url=<%= url_for([@article, {only_path: false}])%>', '_blank','width=800, height=500, top=200, left=300');void(0);">
-			<i class="fa fa-google-plus fa-2x share-buttons" aria-hidden="true"></i>
-		</a>
-	</div>
+	<div class="description"> <%= raw @article.body %> </div>
 </div>
-
 
 <div id="comments">
 		<%= render 'disqus'%>
