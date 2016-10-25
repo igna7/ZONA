@@ -28,8 +28,9 @@
 				<%end%>
 			</div>
 	</div>	
-	<div class="description"> <%= raw @article.body %> </div>
+	<div class="description"> <%= simple_format(@article.body) %> </div>
 </div>
+
 <div id="post_show_mobile">
 	<div class="ads"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- zonauniversitaria-mobi -->
@@ -59,8 +60,9 @@
 				<%end%>
 			</div>
 	</div>	
-	<div class="description"> <%= raw @article.body %> </div>
+	<div class="description"> <%= simple_format(@article.body) %> </div>
 </div>
+
 
 <div id="comments">
 		<%= render 'disqus'%>
